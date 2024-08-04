@@ -14,6 +14,3 @@ RUN apt-get update && apt-get install -y \
 
 # Set up directories
 WORKDIR /brompton
-
-# Copy your project files
-COPY . .

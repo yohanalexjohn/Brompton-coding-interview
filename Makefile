@@ -1,6 +1,7 @@
 # Define the Build directory and executable name 
 BUILD_DIR := build
 EXECUTABLE := brompton 
+DOCS_DIR := docs
 
 # Determine the operating system
 UNAME_S := $(shell uname -s)
@@ -37,6 +38,6 @@ docs:
 
 # Clean the build directory
 clean:
-	@rm -rf $(BUILD_DIR)
+	@rm -rf $(BUILD_DIR) $(DOCS_DIR) 
 
 .PHONY: all test clean docs
