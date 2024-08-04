@@ -74,7 +74,7 @@ of your choice with all the documentation.
     ```shell
     # Mount the source code to create a shared link with host machine 
     # and the docker container.
-    docker run --rm -v "Entire path to the <Brompton> repo ":/brompton brompton:1.0
+    docker run -it --rm -v "Entire path to the <Brompton> repo ":/brompton brompton:1.0
     ```
 
 4. Run the following for each specific task
