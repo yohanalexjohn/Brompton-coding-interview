@@ -27,6 +27,7 @@ add_executable(
 # Executable to run the tests 
 add_executable(
   brompton_tests
+  src/bits.cpp
   test/test_bits.cpp
 )
 
