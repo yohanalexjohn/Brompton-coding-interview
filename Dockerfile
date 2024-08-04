@@ -1,5 +1,16 @@
-FROM alpine:latest
+FROM ubuntu:latest
 
 LABEL key="value"
 
-RUN apk add --update-cache \
+RUN apt-get update && apt-get install -y \
+    xdg-utils \
+    build-essential \
+    cmake \
+    make \
+    doxygen \
+    git \
+    curl \
+    && apt-get clean
+
+# Set up directories
+WORKDIR /brompton

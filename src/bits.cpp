@@ -6,7 +6,6 @@
  * @author Yohan John
  */
 
-
 #include "bits.hpp"
 
 void bitManipulation::setBit(size_t index)
@@ -27,7 +26,6 @@ void bitManipulation::setBit(size_t index)
     bitset[byteIndex] |= (0x01 << bitIndex);
 }
 
-
 void bitManipulation::clearBit(size_t index)
 {
     std::lock_guard<std::mutex> lock(mutex);
@@ -44,7 +42,6 @@ void bitManipulation::clearBit(size_t index)
 
     // Clear the bit at the index for the given value
     bitset[byteIndex] &= ~(0x01 << bitIndex);
-
 }
 
 bool bitManipulation::getBit(size_t index)
