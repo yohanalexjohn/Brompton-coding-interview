@@ -17,17 +17,38 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
+# Add the executable to run the application 
 add_executable(
-  hello_test
-  hello_test.cc
+  brompton
+  src/bits.cpp
+  src/main.cpp
+)
+
+# Executable to run the tests 
+add_executable(
+  brompton_tests
+  test/test_bits.cpp
+)
+
+# Include the header files directory
+target_include_directories(
+  brompton
+  PRIVATE ${PROJECT_SOURCE_DIR}/include
+)
+
+# Include the header files directory for the tests
+target_include_directories(
+  brompton_tests
+  PRIVATE ${PROJECT_SOURCE_DIR}/include
 )
 
 # Link the GoogleTest library
 target_link_libraries(
-  hello_test
+  brompton_tests
   GTest::gtest_main
 )
 
+# Discover and register the tests
 include(GoogleTest)
-gtest_discover_tests(hello_test)
+gtest_discover_tests(brompton_tests)
 
