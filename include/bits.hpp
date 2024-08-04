@@ -1,13 +1,15 @@
 /**
-* @brief 
-* @file
-* 
+* @brief Set up the header for the Manipulation of bits 
+*        provided a value and an index
+*
+* @file bits.hpp
 * @author Yohan John 
 */
 
 #ifndef BIT_MANIPULATION
 #define BIT_MANIPULATION
 
+#include <iostream>
 #include <vector>
 #include <mutex>
 
