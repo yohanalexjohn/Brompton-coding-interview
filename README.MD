@@ -99,7 +99,7 @@ Run the following command
 
 ```shell
 # Windows run 
-start docs\\html\\index.html
+start docs/html/index.html
 
 # Linux run same for MacOS 
 xdg-open docs/html/index.html
