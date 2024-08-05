@@ -42,7 +42,7 @@ user to view the doxygen report externally in the browser once they have been ge
 1. Run the google tests for the project through the following command
 
     ```shell
-    make tests
+    make test
     ```
 
 ### Generating and running the docs
